@@ -9,7 +9,64 @@
 body {
     background-color: #f2f2f2;
 }
+/* carrito de compras */
+/* Estilo general del carrito */
+.cart {
+    position: relative; /* Necesario para posicionar el contador */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
+.cart:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
+}
+
+/* Estilo del ícono del carrito */
+.cart img {
+    width: 50%;
+    
+}
+
+/* Contador de productos */
+.count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff0000; /* Color rojo llamativo */
+    color: #ffffff; /* Texto blanco */
+    font-size: 14px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Forma redonda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transform: translate(50%, -50%); /* Mueve el contador fuera del borde */
+    pointer-events: none; /* Desactiva la interacción con el contador */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cart {
+        width: 40px;
+        height: 40px;
+    }
+
+    .count {
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* carrito de compras */
 /* Barra superior */
 .top-bar {
     background-color: #000;
@@ -104,7 +161,7 @@ body {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 1);
     max-width: 100%;
-    margin-top: 10px;
+    margin-top: 2px;
 }
 
 .navbar {
@@ -166,7 +223,7 @@ body {
 /*estilos carrusel de imagenes */
 
 .arriba {
-    margin-top: 120px;
+    margin-top: 215px;
 }
 
 .carousel {
@@ -369,7 +426,7 @@ body {
     z-index: 1000;
     width: 0%;
     height: 4px;
-    background-color: #14ff72cb;
+    /* background-color: #14ff72cb; */
     left: 0;
     top: 0;
     animation: runningTime 7s linear 1 forwards;
@@ -455,13 +512,14 @@ body {
     padding-left: 40px;
     /*margin-top: 50px;*/
     /* border: 1px solid #333; */
-
+   
 }
 
 .carousel__track-container {
     overflow: hidden;
     width: 100%;
     display: flex;
+   
 }
 
 .carousel__track {
@@ -570,24 +628,42 @@ body {
     margin-top: 80px;
 }
 
+
+
+/* Responsividad */
 @media (max-width: 1024px) {
     .carousel__slide {
-        flex: 1 1 calc(50% - var(--slide-gap));
-        /* Dos productos por fila */
-        max-width: calc(50% - var(--slide-gap));
+        flex: 0 0 calc((100% - var(--slide-gap)) / 2); /* Dos tarjetas */
+        max-width: calc((100% - var(--slide-gap)) / 2);
     }
 }
 
 @media (max-width: 768px) {
     .carousel__slide {
-        flex: 1 1 calc(100% - var(--slide-gap));
-        /* Un producto por fila */
+        flex: 0 0 calc(100% - var(--slide-gap)); /* Una tarjeta */
         max-width: calc(100% - var(--slide-gap));
+    }
+
+    .product {
+        aspect-ratio: 3 / 5; /* Ajusta proporción en móviles */
+    }
+
+    .title2 {
+        font-size: 20px;
+        margin: 10px;
     }
 }
 
+@media (max-width: 480px) {
+    .carousel__button {
+        font-size: 18px;
+    }
 
-
+    .discount {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+}
 
 
 
@@ -728,8 +804,37 @@ body {
 .swiper-slide-button {
     margin: 320px;
     background-color: #777272;
+    font-size: 4px;
+    width: 10px;
+    height: 10px;
+}
+.swiper-slide-button::after{
+    font-size: 14px;  
+   
 
 }
+/* .swiper-button-next, .swiper-button-prev {
+    background-color: #333;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 14px;
+    opacity: 0.8;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .swiper-button-next:hover, .swiper-button-prev:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 14px; /* Ajusta el tamaño del icono 
+    font-weight: bold;
+  } */
 
 @media screen and (max-width: 768px) {
     .card-wrapper {

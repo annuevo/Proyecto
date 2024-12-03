@@ -214,35 +214,68 @@ prevButton.addEventListener('click', () => moveToSlide('prev'));
 
 /*Inicio del segundo carrusel de productos*/
 
-new Swiper('.card-wrapper', {
-    loop: true,
-    spaceBetween: 30,
+// new Swiper('.card-wrapper', {
+//     loop: true,
+//     spaceBetween: 30,
   
-    // pagination bulltes
-    pagination: {
+//     // pagination bulltes
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//       dynamicBullets: true
+//     },
+  
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+// // Responsive breakpoints
+//     breakpoints:{
+//         0: {
+//             slidesPerView: 1
+//         },
+//         768: {
+//             slidesPerView: 2
+//         },
+//         1024: {
+//             slidesPerView: 3
+//         },
+//     }
+//   });
+
+new Swiper('.card-wrapper', {
+  loop: true, // Habilita el loop infinito
+  spaceBetween: 30, // Espaciado entre tarjetas
+  autoplay: {
+      delay: 2000, // Mueve cada 5 segundos
+      disableOnInteraction: false, // Permite que el autoplay continúe incluso si el usuario interactúa
+  },
+  // Pagination (puntos indicadores)
+  pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      dynamicBullets: true
-    },
-  
-    // Navigation arrows
-    navigation: {
+      dynamicBullets: true,
+  },
+  // Navigation arrows
+  navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-// Responsive breakpoints
-    breakpoints:{
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        },
-    }
-  });
+  },
+  // Responsive breakpoints
+  breakpoints: {
+      0: {
+          slidesPerView: 1, // 1 tarjeta en pantallas pequeñas
+      },
+      768: {
+          slidesPerView: 2, // 2 tarjetas en pantallas medianas
+      },
+      1024: {
+          slidesPerView: 3, // 3 tarjetas en pantallas grandes
+      },
+  },
+});
+
 
   /*fin del segundo carrusel de productos */
 
