@@ -5,26 +5,38 @@
     box-sizing: border-box;
     list-style: none;
 }
+
+body {
+    background-color: #f2f2f2;
+}
+
 /* Barra superior */
 .top-bar {
     background-color: #000;
     color: #fff;
-    
+
     white-space: nowrap;
 }
-.contenedor{
+
+.contenedor {
     width: 100%;
     background-color: #000;
     height: 40px;
 }
+
 .marquee-container {
-    width: 70%; /* Ocupa el 70% del ancho de la pantalla */
-    overflow: hidden; /* Oculta el texto fuera del contenedor */
-    background-color: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco */
+    width: 70%;
+    /* Ocupa el 70% del ancho de la pantalla */
+    overflow: hidden;
+    /* Oculta el texto fuera del contenedor */
+    background-color: #000;
+    /* Fondo negro */
+    color: #fff;
+    /* Texto blanco */
     padding: 10px 0;
     position: relative;
-    margin: auto; /* Centra el contenedor */
+    margin: auto;
+    /* Centra el contenedor */
     text-align: center;
     font-size: 16px;
     height: 30px;
@@ -36,11 +48,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-bottom: 2px solid #000;
     margin-left: 420px;
     margin-right: 420px;
-    
+
 }
 
 .header img {
@@ -90,44 +102,53 @@
     display: flex;
     justify-content: center;
     z-index: 1000;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 1);
     max-width: 100%;
     margin-top: 10px;
 }
+
 .navbar {
     display: flex;
 
 }
-.menu-1 ul li a{
+
+.menu-1 ul li a {
     font-size: 18px;
     transition: all .2s ease;
 }
-.menu-1 ul li a:hover{
-background-color: #755959;
+
+.menu-1 ul li a:hover {
+    background-color: #755959;
 
 }
-.menu-1 ul li ul{
+
+.menu-1 ul li ul {
     position: absolute;
     right: 0;
     width: 200px;
     background-color: rgb(206, 176, 176);
     display: none;
 }
-.menu-1 ul li ul li a{
+
+.menu-1 ul li ul li a {
     font-size: 15px;
     text-transform: capitalize;
 }
-.menu-1 ul li ul li{
+
+.menu-1 ul li ul li {
     width: 100%;
 }
-.menu-1 ul li:hover > ul {
+
+.menu-1 ul li:hover>ul {
     display: initial;
 }
-.menu .navbar ul li{
+
+.menu .navbar ul li {
     position: relative;
     float: left;
 
 }
+
 .menu .navbar ul li a {
     font-size: 18px;
     padding: 20px;
@@ -135,7 +156,7 @@ background-color: #755959;
     display: block;
 }
 
-    
+
 
 
 /*Menu responsivo*/
@@ -144,11 +165,11 @@ background-color: #755959;
 
 /*estilos carrusel de imagenes */
 
-section{
+.arriba {
     margin-top: 120px;
 }
 
-.carousel{
+.carousel {
     width: 100vw;
     height: 100vh;
     margin-top: -50px;
@@ -156,7 +177,7 @@ section{
     position: relative;
 }
 
-.carousel .list .item{
+.carousel .list .item {
     width: 180px;
     height: 250px;
     position: absolute;
@@ -172,7 +193,7 @@ section{
 }
 
 .carousel .list .item:nth-child(1),
-.carousel .list .item:nth-child(2){
+.carousel .list .item:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -181,23 +202,23 @@ section{
     height: 100%;
 }
 
-.carousel .list .item:nth-child(3){
+.carousel .list .item:nth-child(3) {
     left: 67%;
 }
 
-.carousel .list .item:nth-child(4){
+.carousel .list .item:nth-child(4) {
     left: calc(67% + 200px);
 }
 
-.carousel .list .item:nth-child(5){
+.carousel .list .item:nth-child(5) {
     left: calc(67% + 400px);
 }
 
-.carousel .list .item:nth-child(6){
+.carousel .list .item:nth-child(6) {
     left: calc(67% + 600px);
 }
 
-.carousel .list .item:nth-child(n+7){
+.carousel .list .item:nth-child(n+7) {
     left: calc(67% + 800px);
     opacity: 0;
 }
@@ -206,7 +227,7 @@ section{
 
 
 
-.list .item .content{
+.list .item .content {
     position: absolute;
     top: 50%;
     left: 100px;
@@ -217,11 +238,11 @@ section{
     display: none;
 }
 
-.list .item:nth-child(2) .content{
+.list .item:nth-child(2) .content {
     display: block;
 }
 
-.content .title{
+.content .title {
     font-size: 100px;
     text-transform: uppercase;
     color: #14ff72cb;
@@ -232,7 +253,7 @@ section{
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content .name{
+.content .name {
     font-size: 100px;
     text-transform: uppercase;
     font-weight: bold;
@@ -243,7 +264,7 @@ section{
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-.content .des{
+.content .des {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
@@ -253,14 +274,14 @@ section{
     animation: animate 1s ease-in-out 0.9s 1 forwards;
 }
 
-.content .btn{
+.content .btn {
     margin-left: 5px;
 
     opacity: 0;
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
 
-.content .btn button{
+.content .btn button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -268,32 +289,32 @@ section{
     border: 2px solid #fff;
 }
 
-.content .btn button:nth-child(1){
+.content .btn button:nth-child(1) {
     margin-right: 15px;
 }
 
-.content .btn button:nth-child(2){
+.content .btn button:nth-child(2) {
     background: transparent;
     color: #14ff72cb;
     border: 2px solid #fff;
     transition: 0.3s;
 }
 
-.content .btn button:nth-child(2):hover{
+.content .btn button:nth-child(2):hover {
     background-color: #14ff72cb;
     color: #fff;
     border-color: #14ff72cb;
 }
 
 @keyframes animate {
-    
-    from{
+
+    from {
         opacity: 0;
         transform: translate(0, 100px);
         filter: blur(33px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
@@ -309,7 +330,7 @@ section{
 
 /* next prev arrows */
 
-.arrows{
+.arrows {
     position: absolute;
     top: 80%;
     right: 52%;
@@ -321,7 +342,7 @@ section{
     align-items: center;
 }
 
-.arrows button{
+.arrows button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -336,14 +357,14 @@ section{
     cursor: pointer;
 }
 
-.arrows button:hover{
+.arrows button:hover {
     background: #fff;
     color: #000;
 }
 
 
 /* time running */
-.carousel .timeRunning{
+.carousel .timeRunning {
     position: absolute;
     z-index: 1000;
     width: 0%;
@@ -355,56 +376,378 @@ section{
 }
 
 @keyframes runningTime {
-    
-    from{width: 0%;}
-    to{width: 100%;}
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 
 }
 
 
 /* parte responsiva */
 
-@media screen and (max-width: 999px){
-    
-    header{
+@media screen and (max-width: 999px) {
+
+    header {
         padding-left: 50px;
     }
 
-    .list .item .content{
+    .list .item .content {
         left: 50px;
     }
 
-    .content .title, .content .name{
+    .content .title,
+    .content .name {
         font-size: 70px;
     }
 
-    .content .des{
+    .content .des {
         font-size: 16px;
     }
 
 }
 
-@media screen and (max-width: 690px){
-    header nav a{
+@media screen and (max-width: 690px) {
+    header nav a {
         font-size: 14px;
         margin-right: 0;
     }
 
-    .list .item .content{
+    .list .item .content {
         top: 40%;
     }
 
-    .content .title, .content .name{
+    .content .title,
+    .content .name {
         font-size: 45px;
     }
 
-    .content .btn button{
+    .content .btn button {
         padding: 10px 15px;
         font-size: 14px;
     }
 }
+
 /*fin de parte responsiva*/
 
 
 /*estilos del carrusel de tarjetas*/
 /*fin de estilos carrusel tarjetas*/
+/* carrusel de productos hecho con puro javaScript - jhon oxsa */
+
+
+
+
+
+:root {
+    --slide-width: 300px;
+    --transition-duration: 0.5s;
+    --slide-gap: 20px;
+    /* Espaciado entre productos */
+}
+
+.carrusel {
+    position: relative;
+    width: auto;
+    margin: 50px 300px 50px 300px;
+    overflow: hidden;
+    padding-right: 40px;
+    padding-left: 40px;
+    /*margin-top: 50px;*/
+    /* border: 1px solid #333; */
+
+}
+
+.carousel__track-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+}
+
+.carousel__track {
+    display: flex;
+    gap: var(--slide-gap);
+    /* Espaciado entre las tarjetas */
+    transition: transform var(--transition-duration) ease-in-out;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+    /* Suaviza el movimiento */
+    will-change: transform;
+    /* Optimiza la animación */
+
+
+}
+
+.carousel__slide {
+    flex: 0 0 calc((100% - (2 * var(--slide-gap))) / 3);
+    /* Tres productos visibles */
+    max-width: calc((100% - (2 * var(--slide-gap))) / 3);
+
+    /* flex: 0 0 calc((100% / 3) - var(--slide-gap)); /* Tres productos visibles */
+    /* max-width: calc((100% / 3) - var(--slide-gap)); 
+    box-sizing: border-box; /* Padding no afecta el ancho total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* Espaciado interno dentro de la tarjeta */
+
+}
+
+.product {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.product img {
+    /* width: 150px;
+    height: 200px;
+    margin-bottom: 10px; */
+    width: 90%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.discount {
+    position: relative;
+    top: 10px;
+    right: 150px;
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.add-to-cart {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel__button--left {
+    padding: 10px;
+    left: 12px;
+
+}
+
+.carousel__button--right {
+    right: 12px;
+    padding: 10px;
+}
+
+.title2 {
+    justify-content: center;
+    font-size: 30px;
+    color: #333;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+    .carousel__slide {
+        flex: 1 1 calc(50% - var(--slide-gap));
+        /* Dos productos por fila */
+        max-width: calc(50% - var(--slide-gap));
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel__slide {
+        flex: 1 1 calc(100% - var(--slide-gap));
+        /* Un producto por fila */
+        max-width: calc(100% - var(--slide-gap));
+    }
+}
+
+
+
+
+
+
+/* fin de carrusel de productos con puro javaScript */
+
+
+/* segundo carrusel de productos */
+/* 
+  section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    border: solid 1px #333;
+   
+} */
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+    height: auto;
+    /* border: solid 1px #333; */
+
+}
+
+
+.tit {
+    color: #333;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.card-list .card-item {
+    list-style: none;
+
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+    cursor: grabbing;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 300px;
+
+}
+
+.card-list .card-link .badge {
+    color: #5372f0;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: #dde4ff;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .badge.versace {
+    color: #b22485;
+    background: #f7dff5;
+}
+
+.card-list .card-link .badge.nina {
+    color: #856404;
+    background: #d6f8d6;
+}
+
+.card-list .card-link .badge.paco {
+    color: #205c20;
+    background: #d6f8d6;
+}
+
+.card-list .card-link .badge.moschino {
+    color: #b25a2b;
+    background: #ffe3d2;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #5372f0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372f0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #5372f0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372f0;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #f4f4f7;
+    margin-top: -35px;
+
+    padding: 5px;
+}
+
+.swiper-slide-button {
+    margin: 320px;
+    background-color: #777272;
+
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button {
+        display: none;
+    }
+}
+
+/* fin del segundo carrusel */
+
+
+/* Carrusel de marcas */
+
+/* fin de la carrusel de marcas */

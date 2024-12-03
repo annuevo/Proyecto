@@ -83,3 +83,171 @@ function showSlider(type) {
 // Start the initial animation 
 resetTimeAnimation()
 /*Fin de carrusel de imagenes */
+
+/*JavaScript del primer carrusel de productos */
+
+// const track = document.querySelector('.carousel__track');
+// const slides = Array.from(track.children);
+// const nextButton = document.querySelector('.carousel__button--right');
+// const prevButton = document.querySelector('.carousel__button--left');
+
+// const slideWidth = slides[0].getBoundingClientRect().width;
+
+// // Configura el carrusel al inicio
+// const setSlidePosition = (slide, index) => {
+//   slide.style.left = slideWidth * index + 'px';
+// };
+// slides.forEach(setSlidePosition);
+
+// const moveToSlide = (track, currentSlide, targetSlide) => {
+//   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+//   currentSlide.classList.remove('current-slide');
+//   targetSlide.classList.add('current-slide');
+// };
+
+// const updateInfiniteCarousel = (direction) => {
+//   if (direction === 'next') {
+//     track.appendChild(track.firstElementChild);
+//   } else {
+//     track.prepend(track.lastElementChild);
+//   }
+//   track.style.transition = 'none';
+//   track.style.transform = 'translateX(0)';
+//   setTimeout(() => {
+//     track.style.transition = 'transform var(--transition-duration)';
+//   });
+// };
+
+// // Botones
+// nextButton.addEventListener('click', () => {
+//   track.style.transition = 'transform var(--transition-duration)';
+//   track.style.transform = `translateX(-${slideWidth}px)`;
+
+//   track.addEventListener('transitionend', () => {
+//     updateInfiniteCarousel('next');
+//   }, { once: true });
+// });
+
+// prevButton.addEventListener('click', () => {
+//   track.style.transition = 'transform var(--transition-duration)';
+//   track.style.transform = `translateX(${slideWidth}px)`;
+
+//   track.addEventListener('transitionend', () => {
+//     updateInfiniteCarousel('prev');
+//   }, { once: true });
+// });
+
+
+// /*codigo mejorado */
+const track = document.querySelector('.carousel__track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel__button--right');
+const prevButton = document.querySelector('.carousel__button--left');
+
+const slideWidth = slides[0].getBoundingClientRect().width;
+let isTransitioning = false; // Variable para controlar la transición
+
+// Configura las posiciones iniciales de las diapositivas
+const setSlidePosition = (slide, index) => {
+  slide.style.left = slideWidth * index + 'px';
+};
+slides.forEach(setSlidePosition);
+
+// Mover el carrusel
+const moveToSlide = (direction) => {
+  if (isTransitioning) return; // Evitar múltiples clics durante la transición
+  isTransitioning = true;
+
+  if (direction === 'next') {
+    track.style.transition = 'transform var(--transition-duration)';
+    track.style.transform = `translateX(-${slideWidth}px)`;
+
+    track.addEventListener(
+      'transitionend',
+      () => {
+        track.style.transition = 'none';
+        track.appendChild(track.firstElementChild); // Mueve el primer slide al final
+        track.style.transform = 'translateX(0)'; // Restablece la posición
+        isTransitioning = false; // Habilitar clics nuevamente
+      },
+      { once: true }
+    );
+  } else if (direction === 'prev') {
+    // Mover inmediatamente el último elemento al principio para evitar parpadeos
+    track.style.transition = 'none';
+    track.prepend(track.lastElementChild); // Mueve el último slide al principio
+    track.style.transform = `translateX(-${slideWidth}px)`; // Ajusta la posición
+
+    setTimeout(() => {
+      // Inicia la animación hacia atrás
+      track.style.transition = 'transform var(--transition-duration)';
+      track.style.transform = 'translateX(0)';
+
+      track.addEventListener(
+        'transitionend',
+        () => {
+          isTransitioning = false; // Habilitar clics nuevamente
+        },
+        { once: true }
+      );
+    });
+  }
+};
+
+// Botones
+nextButton.addEventListener('click', () => moveToSlide('next'));
+prevButton.addEventListener('click', () => moveToSlide('prev'));
+
+/*agregando productos*/
+
+
+
+
+
+
+
+/*fin del primer carrusel */
+
+
+// window.addEventListener('resize', updateSlideWidth);
+
+
+/*Inicio del segundo carrusel de productos*/
+
+new Swiper('.card-wrapper', {
+    loop: true,
+    spaceBetween: 30,
+  
+    // pagination bulltes
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+// Responsive breakpoints
+    breakpoints:{
+        0: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        },
+    }
+  });
+
+  /*fin del segundo carrusel de productos */
+
+  /* Carlos castañeda*/
+
+  // Carrusel de marcas
+
+/*fin de carrusel de marcas */

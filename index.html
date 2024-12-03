@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- link -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
 
 <body>
     <!-- Barra superior -->
@@ -90,7 +96,7 @@
         </nav>
     </div>
     <!-- carrusel de imagenes -->
-    <section>
+    <section class="arriba">
         <div class="carousel">
 
             <div class="list">
@@ -99,40 +105,41 @@
                     <div class="content">
                         <div class="title">BOSS</div>
                         <div class="name">EAGLE</div>
-                        <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa
-                            similique consequuntur, reprehenderit dicta repudiandae.</div>
+                        <div class="des">Descubre la máxima sofisticación con BOSS Bottled Absolu, un Parfum Intense
+                            atrevido y altamente concentrado. Esta fragancia amaderada para hombres deja una estela
+                            memorable con una firma irresistible.</div>
                         <div class="btn">
-                            <button>See More</button>
-                            <button>Subscribe</button>
+                            <button>Comprar/button>
+                                <button>Menu</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="item" style="background-image: url(img/img2.jpg);">
+                <div class="item" style="background-image: url(img/cabecera2.webp);">
 
                     <div class="content">
                         <div class="title">TOM FORD</div>
                         <div class="name">OWL</div>
-                        <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa
-                            similique consequuntur, reprehenderit dicta repudiandae.</div>
+                        <div class="des">Las fragancias de Tom Ford tienen notas de orquídea y jazmín para los amantes
+                            de las fragancias florales exuberantes.</div>
                         <div class="btn">
-                            <button>See More</button>
-                            <button>Subscribe</button>
+                            <button>Comprar</button>
+                            <button>Menu</button>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="item" style="background-image: url(img/img3.jpeg);">
+                <div class="item" style="background-image: url(img/cabecera3.webp);">
 
                     <div class="content">
                         <div class="title">ELIXIR ULTIME</div>
                         <div class="name">CROW</div>
-                        <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa
-                            similique consequuntur, reprehenderit dicta repudiandae.</div>
+                        <div class="des">Le Male Elixir de Jean Paul Gaultier es una fragancia de la familia olfativa
+                            Oriental Fougère para Hombres. Esta fragrancia es nueva.</div>
                         <div class="btn">
-                            <button>See More</button>
-                            <button>Subscribe</button>
+                            <button>Comprar</button>
+                            <button>Menu</button>
                         </div>
                     </div>
 
@@ -143,8 +150,9 @@
 
             <!--next prev button-->
             <div class="arrows">
-                <button class="prev"> <</button> <!--Añadir iconos-->
-                        <button class="next">></button> <!--Añadir iconos-->
+                <button class="prev">
+                    &lt;</button> <!--Añadir iconos-->
+                        <button class="next">&gt;</button> <!--Añadir iconos-->
             </div>
 
 
@@ -154,20 +162,152 @@
         </div>
     </section>
 
-    <!-- carrusel de tarjetas de productos -->
+    <!-- carrusel de tarjetas de productos hecho con jaVaAScript puro -->
     <main>
-        carrusel de tarjetas de productos ---- poner aqui
-
-
-        <br><br><br>
-        ipsum Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit velit dolore praesentium consectetur
-        repellat iure eveniet mollitia? Atque ut, nihil culpa aspernatur porro pariatur repellendus cupiditate nostrum
-        odio magnam recusandae?
+        <h2 class="title2">PERFUMES CON LOS MEJORES PRECIOS</h2>
+        <div class="carrusel">
+            <button class="carousel__button carousel__button--left">&#8249;</button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <!-- primer producto -->
+                    <li class="carousel__slide">
+                        <div class="product">
+                            <span class="discount">-50%</span>
+                            <img src="img/perfume1.webp" alt="Producto 1">
+                            <h3>Shiseido</h3>
+                            <p>Crema Waso Koshirice Calming Spot Treatment 20 ml</p>
+                            <p class="price"><s>S/139.00</s> S/69.50</p>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="product">
+                            <span class="discount">-20%</span>
+                            <img src="img/clinique.jpg" alt="Producto 2">
+                            <h3>Clinique</h3>
+                            <p>Vital Perfection Uplifting and Firming Eye Cream 15 ml</p>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="product">
+                            <span class="discount">-30%</span>
+                            <img src="img/perfume2.webp" alt="Producto 3">
+                            <h3>Tous Fragancia</h3>
+                            <p>Vital Perfection Uplifting and Firming Eye Cream 15 ml</p>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="product">
+                            <span class="discount">-10%</span>
+                            <img src="img/perfume4.webp" alt="Producto 4">
+                            <h3 class="nombre">TOUS</h3>
+                            <p>Vital Perfection Uplifting and Firming Eye Cream 15 ml</p>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </li>
+                    <li class="carousel__slide">
+                        <div class="product">
+                            <span class="discount">-5%</span>
+                            <img src="img/perfume5.jpg" alt="Producto 5">
+                            <h3 class="nombre">Azzaro</h3>
+                            <p>Vital Perfection Uplifting and Firming Eye Cream 15 ml</p>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </div>
+                    </li>
+                    <!-- Repite este bloque para más productos -->
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--right">&#8250;</button>
+        </div>
     </main>
+    <!-- fin de carrusel de tarjeta con javaScript -->
 
 
+    <!-- segundo carrusel de productos hecho con biblioetcas swiper -->
+    <center>
+        <section class="container swiper">
 
+            <div class="card-wrapper">
+                <h2 class="tit">LO MEJOR EN MAQUILLAJE Y FRAGANCIAS</h2>
+                <ul class="card-list swiper-wrapper">
+                    <!-- primner carrusel -->
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/domi.jpg" alt="card-image" class="card-image">
+                            <p class="badge versace">Adolfo-Dominguez</p>
+                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
+                                omnis,
+                            </h2>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="card-button">
+                                <span class="material-symbols-rounded">arrow_forward</span></button>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </a>
+                    </li>
+                    <!-- segundo carrusel -->
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/burberry.avif" alt="card-image" class="card-image">
+                            <p class="badge nina">Burberry</p>
+                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
+                                omnis,
+                            </h2>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="card-button"><span
+                                    class="material-symbols-rounded">arrow_forward</span></button>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </a>
+                    </li>
+                    <!-- tercer carrusel -->
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/marck Jacobs.jpg" alt="card-image" class="card-image">
+                            <p class="badge paco">Marc Jacobs</p>
+                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
+                                omnis,
+                            </h2>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="card-button"><span
+                                    class="material-symbols-rounded">arrow_forward</span></button>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </a>
+                    </li>
+                    <!-- cuarto carrusel -->
+                    <li class="card-item swiper-slide">
+                        <a href="#" class="card-link">
+                            <img src="img/DIOR.jpg" alt="card-image" class="card-image">
+                            <p class="badge moschino">Dior</p>
+                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
+                                omnis,
+                            </h2>
+                            <p class="price"><s>S/389.00</s> S/272.30</p>
+                            <button class="card-button"><span
+                                    class="material-symbols-rounded">arrow_forward</span></button>
+                            <button class="add-to-cart">Añadir al Carrito</button>
+                        </a>
+                    </li>
+                </ul>
+                <!-- librerias swiper -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
+        </section>
+    </center>
+
+
+    <!-- tercer carrusel de marcas de la tienda - carlos castañeda -->
+
+    <!-- fin del carrusel de marcas -->
+    <!-- footer agregar -->
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/java.js"></script>
 
 </html>
