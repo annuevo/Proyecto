@@ -16,10 +16,7 @@ function moveText() {
 // Ejecuta la función de movimiento cada 10ms
 setInterval(moveText, 10);
 
-
-
 /*Parte de carrusel de imagenes */
-
 
 var nextBtn = document.querySelector('.next'),
     prevBtn = document.querySelector('.prev'),
@@ -84,60 +81,8 @@ function showSlider(type) {
 resetTimeAnimation()
 /*Fin de carrusel de imagenes */
 
-/*JavaScript del primer carrusel de productos */
 
-// const track = document.querySelector('.carousel__track');
-// const slides = Array.from(track.children);
-// const nextButton = document.querySelector('.carousel__button--right');
-// const prevButton = document.querySelector('.carousel__button--left');
-
-// const slideWidth = slides[0].getBoundingClientRect().width;
-
-// // Configura el carrusel al inicio
-// const setSlidePosition = (slide, index) => {
-//   slide.style.left = slideWidth * index + 'px';
-// };
-// slides.forEach(setSlidePosition);
-
-// const moveToSlide = (track, currentSlide, targetSlide) => {
-//   track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-//   currentSlide.classList.remove('current-slide');
-//   targetSlide.classList.add('current-slide');
-// };
-
-// const updateInfiniteCarousel = (direction) => {
-//   if (direction === 'next') {
-//     track.appendChild(track.firstElementChild);
-//   } else {
-//     track.prepend(track.lastElementChild);
-//   }
-//   track.style.transition = 'none';
-//   track.style.transform = 'translateX(0)';
-//   setTimeout(() => {
-//     track.style.transition = 'transform var(--transition-duration)';
-//   });
-// };
-
-// // Botones
-// nextButton.addEventListener('click', () => {
-//   track.style.transition = 'transform var(--transition-duration)';
-//   track.style.transform = `translateX(-${slideWidth}px)`;
-
-//   track.addEventListener('transitionend', () => {
-//     updateInfiniteCarousel('next');
-//   }, { once: true });
-// });
-
-// prevButton.addEventListener('click', () => {
-//   track.style.transition = 'transform var(--transition-duration)';
-//   track.style.transform = `translateX(${slideWidth}px)`;
-
-//   track.addEventListener('transitionend', () => {
-//     updateInfiniteCarousel('prev');
-//   }, { once: true });
-// });
-
-
+/*JavaScript del primer carrusel de productos con java scrip puro */
 // /*codigo mejorado */
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
@@ -200,49 +145,9 @@ prevButton.addEventListener('click', () => moveToSlide('prev'));
 
 /*agregando productos*/
 
+/*fin del primer carrusel de productos */
 
-
-
-
-
-
-/*fin del primer carrusel */
-
-
-// window.addEventListener('resize', updateSlideWidth);
-
-
-/*Inicio del segundo carrusel de productos*/
-
-// new Swiper('.card-wrapper', {
-//     loop: true,
-//     spaceBetween: 30,
-  
-//     // pagination bulltes
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//       dynamicBullets: true
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-// // Responsive breakpoints
-//     breakpoints:{
-//         0: {
-//             slidesPerView: 1
-//         },
-//         768: {
-//             slidesPerView: 2
-//         },
-//         1024: {
-//             slidesPerView: 3
-//         },
-//     }
-//   });
+/*Inicio del segundo carrusel de productos con bibliotecas swiper*/
 
 new Swiper('.card-wrapper', {
   loop: true, // Habilita el loop infinito
@@ -275,7 +180,6 @@ new Swiper('.card-wrapper', {
       },
   },
 });
-
 
   /*fin del segundo carrusel de productos */
 

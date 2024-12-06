@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Avanzado con Swiper.js</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .swiper-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 50px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* Ajusta la altura según tus necesidades */
+    }
+
+    /* Botones de navegación */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      /* Ajustamos la posición para acercarlos */
+      margin: 0;
+    }
+
+    .swiper-button-next {
+      right: 10px; /* Más cerca del slider */
+    }
+
+    .swiper-button-prev {
+      left: 10px; /* Más cerca del slider */
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Personalización de la paginación */
+    .swiper-pagination {
+      bottom: 10px; /* Más cerca del slider */
+    }
+
+    .swiper-pagination-bullet {
+      background-color: #ccc;
+      opacity: 1;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Carrusel -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('img/cabecera-1.jpg');">wdwdwdwdwdwd</div>
+      <div class="swiper-slide" style="background-image: url('img/swiper-2.webp');"></div>
+      <div class="swiper-slide" style="background-image: url('img/swiper3.jpeg');"></div>
+      <div class="swiper-slide" style="background-image: url('img/swiper4.webp');"></div>
+    </div>
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

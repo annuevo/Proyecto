@@ -9,78 +9,22 @@
 body {
     background-color: #f2f2f2;
 }
+
 /* carrito de compras */
 /* Estilo general del carrito */
-.cart {
-    position: relative; /* Necesario para posicionar el contador */
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.cart:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el cursor */
-}
-
-/* Estilo del ícono del carrito */
-.cart img {
-    width: 50%;
-    
-}
-
-/* Contador de productos */
-.count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #ff0000; /* Color rojo llamativo */
-    color: #ffffff; /* Texto blanco */
-    font-size: 14px;
-    font-weight: bold;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Forma redonda */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    transform: translate(50%, -50%); /* Mueve el contador fuera del borde */
-    pointer-events: none; /* Desactiva la interacción con el contador */
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .cart {
-        width: 40px;
-        height: 40px;
-    }
-
-    .count {
-        font-size: 12px;
-        width: 18px;
-        height: 18px;
-    }
-}
 
 /* carrito de compras */
 /* Barra superior */
 .top-bar {
     background-color: #000;
     color: #fff;
-
     white-space: nowrap;
 }
-
 .contenedor {
     width: 100%;
     background-color: #000;
     height: 40px;
 }
-
 .marquee-container {
     width: 70%;
     /* Ocupa el 70% del ancho de la pantalla */
@@ -98,134 +42,262 @@ body {
     font-size: 16px;
     height: 30px;
 }
-
 /* Logo y barra de búsqueda */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #f2f2f2;
-    border-bottom: 2px solid #000;
-    margin-left: 420px;
-    margin-right: 420px;
-
+    background-color: white;
+    padding: 20px 15px;
+    margin: 20px auto;
+    /* Márgenes arriba y abajo */
+    width: 90%;
+    /* No ocupa todo el ancho */
+    max-width: 1200px;
+    /* Anchura máxima */
+    border-bottom: 1px solid #ccc;
+    /* Línea divisoria */
+    position: relative;
 }
 
-.header img {
+/* Logo Styles */
+.logo {
     height: 40px;
 }
-
+/* Search Bar Styles */
 .search-bar {
     display: flex;
     align-items: center;
-    border: 1px solid #000;
-    border-radius: 20px;
-    padding: 5px;
-    width: 400px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    padding: 5px;
     flex: 1;
+    /* Ocupa el espacio disponible */
+    margin: 0 15px;
+    max-width: 500px;
+    border: 1px solid #000;
+    /* Borde negro */
+    border-radius: 25px;
+    /* Redondeado */
+    overflow: hidden;
 }
-
-.search-bar button {
-    background-color: #000;
-    color: #fff;
+.search-input {
+    flex: 1;
+    padding: 8px 12px;
     border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    font-size: 14px;
+    outline: none;
+    /* Quita el borde al hacer clic */
+}
+.search-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 0;
+}
+.search-button:hover {
+    background-color: #333;
+}
+/* Account Options Styles */
+.account-options {
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.account-options {
+    gap: 5px;
     font-size: 14px;
     color: #000;
 }
+.account-link {
+    text-decoration: none;
+    color: #000;
+}
+.account-link:hover {
+    text-decoration: underline;
+}
+.account-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+/* Cart Styles */
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cartIcon {
+    height: 30px;
+    cursor: pointer;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+    }
+    .search-bar {
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+    .account-options {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .cart {
+        margin-top: 10px;
+    }
+}
 
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+    .logo {
+        height: 35px;
+    }
+    .search-input {
+        font-size: 12px;
+    }
+    .search-button {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .account-link {
+        font-size: 12px;
+    }
+
+    #cartIcon {
+        height: 25px;
+    }
+}
 /* Barra de navegacion */
-
-.menu {
-    position: absolute;
+.superior {
+    position: fixed;
+    top: 155px;
     left: 0;
     right: 0;
+    background-color: #000;
+    padding: 0px 30%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 1);
-    max-width: 100%;
-    margin-top: 2px;
 }
 
-.navbar {
-    display: flex;
-
+.logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
 }
 
-.menu-1 ul li a {
+.navigation ul {
+    list-style: none;
+}
+
+.superior .navigation ul li {
+    float: left;
+    position: relative;
+}
+.superior .navigation ul li a {
     font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 25px;
+    display: block;
     transition: all .2s ease;
 }
 
-.menu-1 ul li a:hover {
-    background-color: #755959;
-
+.superior .navigation ul li a:hover {
+    background-color: #bc93c0;
 }
-
-.menu-1 ul li ul {
+.superior .navigation ul li ul {
     position: absolute;
     right: 0;
-    width: 200px;
-    background-color: rgb(206, 176, 176);
+    width: 300px;
+    background-color: rgba(1, 1, 1, 0.7);
     display: none;
 }
-
-.menu-1 ul li ul li a {
+.superior .navigation ul li ul li a {
     font-size: 15px;
     text-transform: capitalize;
 }
 
-.menu-1 ul li ul li {
+.superior .navigation ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+.superior .navigation ul li ul li {
     width: 100%;
+
 }
 
-.menu-1 ul li:hover>ul {
+.superior .navigation ul li:hover>ul {
     display: initial;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-
+#toggle,
+.superior label {
+    display: none;
+    cursor: pointer;
 }
 
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #FFFFFF;
-    display: block;
+@media(max-width: 950px) {
+    .superior label {
+        display: initial;
+    }
+
+    .superior {
+        padding: 20px 10%;
+    }
+
+    .superior .navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(1, 1, 1, 0.7);
+        display: none;
+    }
+
+    .superior .navigation ul li {
+        width: 100%;
+    }
+
+    .superior .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .superior .navigation ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .superior .navigation ul li ul li {
+        background-color: rgba(1, 1, 1, 0.7);
+
+    }
+
+    .superior .navigation ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #toggle:checked~.navigation {
+        display: block;
+    }
 }
-
-
-
-
 /*Menu responsivo*/
 /*fin de menu responsivo*/
-
-
 /*estilos carrusel de imagenes */
-
 .arriba {
-    margin-top: 215px;
+    margin-top: 276px;
 }
-
 .carousel {
     width: 100vw;
     height: 100vh;
@@ -233,7 +305,6 @@ body {
     overflow: hidden;
     position: relative;
 }
-
 .carousel .list .item {
     width: 180px;
     height: 250px;
@@ -248,7 +319,6 @@ body {
     z-index: 100;
     transition: 1s;
 }
-
 .carousel .list .item:nth-child(1),
 .carousel .list .item:nth-child(2) {
     top: 0;
@@ -258,32 +328,22 @@ body {
     width: 100%;
     height: 100%;
 }
-
 .carousel .list .item:nth-child(3) {
     left: 67%;
 }
-
 .carousel .list .item:nth-child(4) {
     left: calc(67% + 200px);
 }
-
 .carousel .list .item:nth-child(5) {
     left: calc(67% + 400px);
 }
-
 .carousel .list .item:nth-child(6) {
     left: calc(67% + 600px);
 }
-
 .carousel .list .item:nth-child(n+7) {
     left: calc(67% + 800px);
     opacity: 0;
 }
-
-
-
-
-
 .list .item .content {
     position: absolute;
     top: 50%;
@@ -294,7 +354,6 @@ body {
     color: #fff;
     display: none;
 }
-
 .list .item:nth-child(2) .content {
     display: block;
 }
@@ -309,7 +368,6 @@ body {
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
-
 .content .name {
     font-size: 100px;
     text-transform: uppercase;
@@ -320,7 +378,6 @@ body {
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
-
 .content .des {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -330,14 +387,12 @@ body {
     opacity: 0;
     animation: animate 1s ease-in-out 0.9s 1 forwards;
 }
-
 .content .btn {
     margin-left: 5px;
 
     opacity: 0;
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
-
 .content .btn button {
     padding: 10px 20px;
     border: none;
@@ -345,24 +400,20 @@ body {
     font-size: 16px;
     border: 2px solid #fff;
 }
-
 .content .btn button:nth-child(1) {
     margin-right: 15px;
 }
-
 .content .btn button:nth-child(2) {
     background: transparent;
     color: #14ff72cb;
     border: 2px solid #fff;
     transition: 0.3s;
 }
-
 .content .btn button:nth-child(2):hover {
     background-color: #14ff72cb;
     color: #fff;
     border-color: #14ff72cb;
 }
-
 @keyframes animate {
 
     from {
@@ -379,14 +430,7 @@ body {
 }
 
 /* Carousel */
-
-
-
-
-
-
 /* next prev arrows */
-
 .arrows {
     position: absolute;
     top: 80%;
@@ -398,7 +442,6 @@ body {
     gap: 10px;
     align-items: center;
 }
-
 .arrows button {
     width: 50px;
     height: 50px;
@@ -413,13 +456,10 @@ body {
     transition: .5s;
     cursor: pointer;
 }
-
 .arrows button:hover {
     background: #fff;
     color: #000;
 }
-
-
 /* time running */
 .carousel .timeRunning {
     position: absolute;
@@ -443,31 +483,22 @@ body {
     }
 
 }
-
-
 /* parte responsiva */
-
 @media screen and (max-width: 999px) {
-
     header {
         padding-left: 50px;
     }
-
     .list .item .content {
         left: 50px;
     }
-
     .content .title,
     .content .name {
         font-size: 70px;
     }
-
     .content .des {
         font-size: 16px;
     }
-
 }
-
 @media screen and (max-width: 690px) {
     header nav a {
         font-size: 14px;
@@ -490,9 +521,6 @@ body {
 }
 
 /*fin de parte responsiva*/
-
-
-/*estilos del carrusel de tarjetas*/
 /*fin de estilos carrusel tarjetas*/
 /* carrusel de productos hecho con puro javaScript - jhon oxsa */
 
@@ -502,91 +530,74 @@ body {
     --slide-gap: 20px;
     /* Espaciado entre productos */
 }
-
 .carrusel {
     position: relative;
     width: auto;
-    margin: 50px 300px 50px 300px;
+    margin: 50px auto;
+    /* Centrar el carrusel horizontalmente */
     overflow: hidden;
-    padding-right: 40px;
-    padding-left: 40px;
-    /*margin-top: 50px;*/
-    /* border: 1px solid #333; */
-   
-}
+    padding: 0 40px;
+    /* Espaciado en los bordes laterales */
 
+    max-width: 1300px;
+    /* Limitar el ancho total */
+}
 .carousel__track-container {
     overflow: hidden;
     width: 100%;
     display: flex;
-   
 }
-
 .carousel__track {
     display: flex;
     gap: var(--slide-gap);
     /* Espaciado entre las tarjetas */
     transition: transform var(--transition-duration) ease-in-out;
-    justify-content: space-between;
-    transition: transform 0.3s ease-in-out;
-    /* Suaviza el movimiento */
     will-change: transform;
     /* Optimiza la animación */
-
-
 }
-
 .carousel__slide {
     flex: 0 0 calc((100% - (2 * var(--slide-gap))) / 3);
     /* Tres productos visibles */
     max-width: calc((100% - (2 * var(--slide-gap))) / 3);
-
-    /* flex: 0 0 calc((100% / 3) - var(--slide-gap)); /* Tres productos visibles */
-    /* max-width: calc((100% / 3) - var(--slide-gap)); 
-    box-sizing: border-box; /* Padding no afecta el ancho total */
+    box-sizing: border-box;
+    /* Padding no afecta el ancho total */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     /* Espaciado interno dentro de la tarjeta */
-
 }
-
 .product {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
     text-align: center;
+    position: relative;
+    /* Para la posición del descuento */
 }
-
 .product img {
-    /* width: 150px;
-    height: 200px;
-    margin-bottom: 10px; */
-    width: 90%;
+    width: 100%;
     aspect-ratio: 16 / 9;
+    /* Mantener proporciones */
     object-fit: cover;
     border-radius: 10px;
     height: 400px;
 }
-
 .discount {
-    position: relative;
+    position: absolute;
     top: 10px;
-    right: 150px;
+    left: 10px;
     background: #000;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
 }
-
 .price {
     font-weight: bold;
     margin: 10px 0;
 }
-
 .add-to-cart {
     background: #000;
     color: #fff;
@@ -598,7 +609,7 @@ body {
 
 .carousel__button {
     position: absolute;
-    top: 40%;
+    top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -606,83 +617,44 @@ body {
     font-size: 24px;
     cursor: pointer;
     z-index: 2;
+    padding: 10px;
 }
 
 .carousel__button--left {
-    padding: 10px;
     left: 12px;
-
 }
 
 .carousel__button--right {
     right: 12px;
-    padding: 10px;
 }
 
 .title2 {
-    justify-content: center;
+    text-align: center;
     font-size: 30px;
     color: #333;
-    margin-left: 600px;
-    margin-bottom: 20px;
-    margin-top: 80px;
+    margin: 100px 0 0 10px;
 }
 
-
-
-/* Responsividad */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .carousel__slide {
-        flex: 0 0 calc((100% - var(--slide-gap)) / 2); /* Dos tarjetas */
+        flex: 0 0 calc((100% - var(--slide-gap)) / 2);
+        /* Dos productos visibles */
         max-width: calc((100% - var(--slide-gap)) / 2);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .carousel__slide {
-        flex: 0 0 calc(100% - var(--slide-gap)); /* Una tarjeta */
+        flex: 0 0 calc(100% - var(--slide-gap));
+        /* Un producto por fila */
         max-width: calc(100% - var(--slide-gap));
     }
-
-    .product {
-        aspect-ratio: 3 / 5; /* Ajusta proporción en móviles */
-    }
-
-    .title2 {
-        font-size: 20px;
-        margin: 10px;
-    }
 }
-
-@media (max-width: 480px) {
-    .carousel__button {
-        font-size: 18px;
-    }
-
-    .discount {
-        font-size: 10px;
-        padding: 3px 8px;
-    }
-}
-
-
 
 /* fin de carrusel de productos con puro javaScript */
-
-
 /* segundo carrusel de productos */
-/* 
-  section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    border: solid 1px #333;
-   
-} */
-
 .card-wrapper {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 60px 35px;
     padding: 20px 10px;
     overflow: hidden;
@@ -690,7 +662,6 @@ body {
     /* border: solid 1px #333; */
 
 }
-
 
 .tit {
     color: #333;
@@ -802,40 +773,15 @@ body {
 }
 
 .swiper-slide-button {
-    margin: 320px;
+    margin: 250px;
     background-color: #777272;
     font-size: 4px;
     width: 10px;
     height: 10px;
 }
-.swiper-slide-button::after{
-    font-size: 14px;  
-   
-
-}
-/* .swiper-button-next, .swiper-button-prev {
-    background-color: #333;
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.swiper-slide-button::after {
     font-size: 14px;
-    opacity: 0.8;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  .swiper-button-next:hover, .swiper-button-prev:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-
-  .swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 14px; /* Ajusta el tamaño del icono 
-    font-weight: bold;
-  } */
-
+}
 @media screen and (max-width: 768px) {
     .card-wrapper {
         margin: 0 10px 25px;
@@ -845,8 +791,80 @@ body {
         display: none;
     }
 }
+/* carrusel de imagenes */
+.swiper-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    height: 500px;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    /* Ajusta la altura según tus necesidades */
+}
+/* Botones de navegación */
+.mi-carrusel .swiper-button-next,
+.mi-carrusel .swiper-button-prev {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    margin: 0;
+}
+.mi-carrusel .swiper-button-next {
+    right: 10px;
+    /* Ajustado cerca del carrusel */
+}
+.mi-carrusel .swiper-button-prev {
+    left: 10px;
+    /* Ajustado cerca del carrusel */
+}
+.mi-carrusel .swiper-button-next:hover,
+.mi-carrusel .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.mi-carrusel .swiper-button-next::after,
+.mi-carrusel .swiper-button-prev::after {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Personalización de la paginación */
+.mi-carrusel .swiper-pagination {
+    bottom: 10px;
+    /* Más cerca del slider */
+}
+.mi-carrusel .swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.mi-carrusel .swiper-pagination-bullet-active {
+    background-color: #333;
+}
+/* fin de carrusel de imagenes */
 
-/* fin del segundo carrusel */
+
 
 
 /* Carrusel de marcas */

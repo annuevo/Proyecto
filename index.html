@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!-- link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
 <style>
     .fixed-menu-container {
     position: fixed; /* Fija todo el contenedor */
@@ -22,37 +21,29 @@
     background-color: #fff; /* Fondo blanco para evitar transparencia */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra elegante */
 }
-
 </style>
-
-
 <body>
-
     <div class="fixed-menu-container">
     <!-- Barra superior -->
     <div class="contenedor">
         <div class="marquee-container">
             <div class="top-bar" id="marquee">
-                !BIENVENIDO PERFUMERIAS PREMIUN! Recuerda ofrecemos los mejores perfumes de alta calidad
+                !BIENVENIDO PERFUMERIAS PYM! Recuerda ofrecemos los mejores perfumes de alta calidad
             </div>
         </div>
     </div>
     <!-- Header con logo y barra de búsqueda -->
     <div class="header">
-
-
         <img src="img/logo.avif" style="height: 40px;" alt="Perfumerías Unidas Logo">
 
         <div class="search-bar">
             <input type="text" placeholder="¿Qué estás buscando?">
             <button>🔍</button> <!--Añadir icono-->
         </div>
-
         <div class="account-options">
-            <a href="#" style="color: #000;">Iniciar sesión</a>
+            <a href="#" style="color: #000;">Iniciar sesión o </a>
             <a href="#" style="color: #000;">Crear Cuenta</a>
             <span>👤</span> <!--Añadir icono-->
-
         </div>
         <!-- logo de carrito de compras -->
         <div class="cart" id="cart">
@@ -62,66 +53,32 @@
           <!-- fin de logo de carrito de compras -->
     </div>
     <!-- Barra de navegacion -->
+    <header class="superior">
+       
+        <input type="checkbox" id="toggle">
+        <label for="toggle"><img class="menu" src="img/lineas (1).png" alt="menu-hamburguesa"></label>
 
-    <div class="menu">
-        <nav class="navbar">
-            <div class="menu-1">
-                <ul>
-                    <li><a href="#">TRATAMIENTO</a></li>
-                    <li><a href="#">CAPILAR PROFESIONAL</a>
-                        <ul>
-                            <li><a href="#">menu sub1</a></li>
-                            <li><a href="#">menu sub2</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#productos">PERFUMES</a>
-                        <ul>
-                            <li><a href="#">menu sub1</a></li>
-                            <li><a href="#">menu sub2</a></li>
-                            <li><a href="#">menu sub3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"> MAQUILLAJE</a>
-                        <ul>
-                            <li><a href="#">menu sub1</a></li>
-                            <li><a href="#">menu sub1</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">SETS</a>
-                        <ul>
-                            <li><a href="#" id="iniciar-sesion">menu sub1</a></li>
-                            <li><a href="#">menu sub1</a></li>
-                            <li><a href="#">Mi Cuenta</a></li>
-                            <li><a href="#" id="cerrar-sesion" style="display: none;">menu sub1</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">ACCESORIOS</a>
-                        <ul>
-                            <li><a href="#">Opcion1</a></li>
-                            <li><a href="#">Opcion2</a></li>
-                            <li><a href="#">Opcion3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="">MARCAS</a>
-                        <ul>
-                            <li><a href="#">Opcion1</a></li>
-                            <li><a href="#">Opcion2</a></li>
-                            <li><a href="#">Opcion3</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Marcas</a>
+                    <ul>
+                        <li><a href="#">Dior</a></li>
+                        <li><a href="#">Clinique</a></li>
+                        <li><a href="#">Shiseido</a></li>
+                        <li><a href="#">Burberry</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contacto</a></li>
+            </ul>
         </nav>
-    </div>
-
+    </header>
 </div>
     <!-- carrusel de imagenes -->
     <section class="arriba">
         <div class="carousel">
-
             <div class="list">
-
                 <div class="item" style="background-image: url(img/img1.jpg);">
                     <div class="content">
                         <div class="title">BOSS</div>
@@ -135,7 +92,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="item" style="background-image: url(img/cabecera2.webp);">
 
                     <div class="content">
@@ -148,11 +104,8 @@
                             <button>Menu</button>
                         </div>
                     </div>
-
                 </div>
-
                 <div class="item" style="background-image: url(img/cabecera3.webp);">
-
                     <div class="content">
                         <div class="title">ELIXIR ULTIME</div>
                         <div class="name">CROW</div>
@@ -163,26 +116,19 @@
                             <button>Menu</button>
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
-
             <!--next prev button-->
             <div class="arrows">
                 <button class="prev">
                     &lt;</button> <!--Añadir iconos-->
                         <button class="next">&gt;</button> <!--Añadir iconos-->
             </div>
-
-
-            <!-- time running -->
+            <!-- time runnng -->
             <div class="timeRunning"></div>
 
         </div>
     </section>
-
     <!-- carrusel de tarjetas de productos hecho con jaVaAScript puro -->
     <main>
         <h2 class="title2">PERFUMES CON LOS MEJORES PRECIOS</h2>
@@ -249,8 +195,6 @@
         </div>
     </main>
     <!-- fin de carrusel de tarjeta con javaScript -->
-
-
     <!-- segundo carrusel de productos hecho con biblioetcas swiper -->
     <center>
         <section class="container swiper">
@@ -323,14 +267,148 @@
         </section>
     </center>
 
+    <!-- carrusel de imagenes con swiper -->
+  <!-- Carrusel -->
+   <div class="mi-carrusel">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('img/cabecera-1.jpg');"></div>
+      <div class="swiper-slide" style="background-image: url('img/swiper-2.webp');"></div>
+      <div class="swiper-slide" style="background-image: url('img/swiper3.jpeg');"></div>
+      <div class="swiper-slide" style="background-image: url('img/swiper4.webp');"></div>
+    </div>
+    <!-- Botones de navegación -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
 
+ <!-- fin de carrusel de imagenes con swiper -->
     <!-- tercer carrusel de marcas de la tienda - carlos castañeda -->
 
     <!-- fin del carrusel de marcas -->
+    <!-- Inicio Footer -->
+      <!-- Footer Section -->
+  <footer>
+    <!-- Icons Section -->
+    <div class="icons-section">
+      <div class="icon-item" id="icon1">
+        <img src="IMG/footer-1.png" alt="Compra fácil y seguro" 
+        data-original-src="IMG/footer-1.png"
+        data-hover-src="IMG/hover.png">
+        <h4>Compra fácil y seguro</h4>
+        <p data-hover-text="Haz tus compras de manera rápida y segura.">
+            Paso a paso para comprar en la web
+            </p>
+      </div>
+      <div class="icon-item"  id="icon1">
+        <img src="IMG/footer-2.png" alt="Tiendas Físicas"
+        data-original-src="img/footer-2.png"
+        data-hover-src="img/hover-2.png">
+        <h4>Tiendas Físicas</h4>
+        <p data-hover-text="Acercate a la tienda y conoce las mejores promociones"
+        >Conoce nuestras tiendas</p>
+      </div>
+      <div class="icon-item" id="icon1">
+        <img src="IMG/footer-3.png" alt="Sigue tu pedido"
+
+        data-original-src="IMG/footer-3.png"
+        data-hover-src="IMG/hover-3.png"
+        >
+        <h4>Sigue tu pedido</h4>
+        <p
+        data-hover-text="Puedes saber como va tu pedido"
+        >Hazle seguimiento a tu pedido</p>
+      </div>
+      <div class="icon-item" id="icon1">
+        <img src="IMG/footer-4.png" alt="Promociones del mes"
+        data-original-src="IMG/footer-4.png"
+        data-hover-src="IMG/hover-4.png"
+        >
+        <h4>Promociones del mes</h4>
+        <p
+        data-hover-text="Conoce las mejores promociones que tenemos"
+        >Conoce nuestros descuentos</p>
+      </div>
+      <div class="icon-item" id="icon1">
+        <img src="IMG/footer-5.png" alt="Beneficios"
+        data-original-src="IMG/footer-5.png"
+        data-hover-src="IMG/hover-5.png"
+        >
+        <h4>Beneficios</h4>
+        <p
+        data-hover-text="¡Que esperar para conocer nuestros beneficios!"
+        >Conoce todos los beneficios que tenemos para ti</p>
+      </div>
+    </div>
+    <!-- Footer Content -->
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>SOBRE NOSOTROS</h3>
+        <ul>
+          <li><a href="#">Perfumerías Unidas</a></li>
+          <li><a href="#">Tiendas físicas</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>CATEGORÍAS</h3>
+        <ul>
+          <li><a href="#">Perfumes</a></li>
+          <li><a href="#">Tratamiento</a></li>
+          <li><a href="#">Maquillaje</a></li>
+          <li><a href="#">Accesorios</a></li>
+          <li><a href="#">Capilar profesional</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>SERVICIO AL CLIENTE</h3>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Ventas corporativas</a></li>
+          <li><a href="#">Libro de reclamaciones</a></li>
+          <li><a href="#">Rastreo</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>TÉRMINOS Y CONDICIONES</h3>
+        <ul>
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Políticas de protección de datos</a></li>
+          <li><a href="#">Políticas de publicidad y promociones</a></li>
+          <li><a href="#">Condiciones de Promociones</a></li>
+          <li><a href="#">Cambios y devoluciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>MÉTODOS DE PAGO</h3>
+        <div class="payment-icons">
+          <img src="IMG/visa.png" alt="Visa">
+          <img src="IMG/tarjeta-mastercard.png" alt="MasterCard">
+          <img src="IMG/dinero.png" alt="Diners Club">
+        </div>
+        <div class="social-icons">
+          <a href="#"><img src="IMG/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="IMG/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="IMG/youtube.png" alt="YouTube"></a>
+          <a href="#"><img src="IMG/tik-tok (1).png" alt="TikTok"></a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Footer -->
+    <div class="bottom-footer">
+      <p>PERFUMERÍAS PYM - RUC 20108792223</p>
+      <a href="#" class="reclamos">Libro de reclamaciones</a>
+    </div>
+  </footer>
     <!-- footer agregar -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/java.js"></script>
 <script src="carrito/carro.js"></script>
+<script src="js/footer.js"></script>
 
 </html>
