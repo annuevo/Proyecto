@@ -528,7 +528,7 @@ body {
 :root {
 --slide-gap: 10px;
 --transition-duration: 0.5s;
---mobile-slide-width: 50%;
+--mobile-slide-width: 47%;
 --tablet-slide-width: calc(50% - var(--slide-gap));
 --desktop-slide-width: calc((100% - (2 * var(--slide-gap))) / 3);
 }
@@ -539,6 +539,7 @@ body {
     margin: 20px auto;
     overflow: hidden;
     padding: 0 10px; /* Espaciado en los bordes laterales */
+    border: 1px solid #333;
 }
 
 .carousel__track-container {
@@ -634,7 +635,7 @@ body {
 }
 
 /* Estilos para tablet */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     :root {
         --mobile-slide-width: var(--tablet-slide-width);
     }
@@ -664,6 +665,7 @@ body {
         font-size: 24px; /* Botones más grandes */
     }
 }
+
 
 
 /* fin de carrusel de productos con puro javaScript */
