@@ -149,34 +149,88 @@ prevButton.addEventListener('click', () => moveToSlide('prev'));
 
 /*Inicio del segundo carrusel de productos con bibliotecas swiper*/
 
-new Swiper('.card-wrapper', {
-  loop: true, // Habilita el loop infinito
-  spaceBetween: 30, // Espaciado entre tarjetas
-  autoplay: {
-      delay: 2000, // Mueve cada 5 segundos
-      disableOnInteraction: false, // Permite que el autoplay continúe incluso si el usuario interactúa
+const productos = [
+  {
+      imagen: "img/domi.jpg",
+      categoria: "Adolfo-Dominguez",
+      clase: "versace",
+      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      precioAnterior: "S/389.00",
+      precioActual: "S/272.30"
   },
-  // Pagination (puntos indicadores)
+  {
+      imagen: "img/burberry.avif",
+      categoria: "Burberry",
+      clase: "nina",
+      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      precioAnterior: "S/389.00",
+      precioActual: "S/272.30"
+  },
+  {
+      imagen: "img/marck Jacobs.jpg",
+      categoria: "Marc Jacobs",
+      clase: "paco",
+      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      precioAnterior: "S/389.00",
+      precioActual: "S/272.30"
+  },
+  {
+      imagen: "img/DIOR.jpg",
+      categoria: "Dior",
+      clase: "moschino",
+      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      precioAnterior: "S/389.00",
+      precioActual: "S/272.30"
+  }
+];
+
+// Generar HTML dinámico
+const containe = document.getElementById('carousel-container');
+
+productos.forEach(producto => {
+  const itemHTML = `
+      <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+              <img src="${producto.imagen}" alt="card-image" class="card-image">
+              <p class="badge ${producto.clase}">${producto.categoria}</p>
+              <h2 class="card-title">${producto.titulo}</h2>
+              <p class="price"><s>${producto.precioAnterior}</s> ${producto.precioActual}</p>
+              <button class="card-button">
+                  <span class="material-symbols-rounded">arrow_forward</span>
+              </button>
+              <button class="add-to-cart">Añadir al Carrito</button>
+          </a>
+      </li>
+  `;
+  containe.innerHTML += itemHTML;
+});
+
+// Inicializar Swiper
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
+  autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+  },
   pagination: {
       el: '.swiper-pagination',
       clickable: true,
       dynamicBullets: true,
   },
-  // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
   },
-  // Responsive breakpoints
   breakpoints: {
       0: {
-          slidesPerView: 1, // 1 tarjeta en pantallas pequeñas
+          slidesPerView: 1,
       },
       768: {
-          slidesPerView: 2, // 2 tarjetas en pantallas medianas
+          slidesPerView: 2,
       },
       1024: {
-          slidesPerView: 3, // 3 tarjetas en pantallas grandes
+          slidesPerView: 3,
       },
   },
 });

@@ -195,71 +195,14 @@
         </div>
     </main>
     <!-- fin de carrusel de tarjeta con javaScript -->
-    <!-- segundo carrusel de productos hecho con biblioetcas swiper -->
+    <!-- segundo carrusel de productos hecho con biblioetcas swiper de forma dinamica-->
     <center>
         <section class="container swiper">
-
             <div class="card-wrapper">
                 <h2 class="tit">LO MEJOR EN MAQUILLAJE Y FRAGANCIAS</h2>
-                <ul class="card-list swiper-wrapper">
-                    <!-- primner carrusel -->
-                    <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
-                            <img src="img/domi.jpg" alt="card-image" class="card-image">
-                            <p class="badge versace">Adolfo-Dominguez</p>
-                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
-                                omnis,
-                            </h2>
-                            <p class="price"><s>S/389.00</s> S/272.30</p>
-                            <button class="card-button">
-                                <span class="material-symbols-rounded">arrow_forward</span></button>
-                            <button class="add-to-cart">Añadir al Carrito</button>
-                        </a>
-                    </li>
-                    <!-- segundo carrusel -->
-                    <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
-                            <img src="img/burberry.avif" alt="card-image" class="card-image">
-                            <p class="badge nina">Burberry</p>
-                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
-                                omnis,
-                            </h2>
-                            <p class="price"><s>S/389.00</s> S/272.30</p>
-                            <button class="card-button"><span
-                                    class="material-symbols-rounded">arrow_forward</span></button>
-                            <button class="add-to-cart">Añadir al Carrito</button>
-                        </a>
-                    </li>
-                    <!-- tercer carrusel -->
-                    <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
-                            <img src="img/marck Jacobs.jpg" alt="card-image" class="card-image">
-                            <p class="badge paco">Marc Jacobs</p>
-                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
-                                omnis,
-                            </h2>
-                            <p class="price"><s>S/389.00</s> S/272.30</p>
-                            <button class="card-button"><span
-                                    class="material-symbols-rounded">arrow_forward</span></button>
-                            <button class="add-to-cart">Añadir al Carrito</button>
-                        </a>
-                    </li>
-                    <!-- cuarto carrusel -->
-                    <li class="card-item swiper-slide">
-                        <a href="#" class="card-link">
-                            <img src="img/DIOR.jpg" alt="card-image" class="card-image">
-                            <p class="badge moschino">Dior</p>
-                            <h2 class="card-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil est
-                                omnis,
-                            </h2>
-                            <p class="price"><s>S/389.00</s> S/272.30</p>
-                            <button class="card-button"><span
-                                    class="material-symbols-rounded">arrow_forward</span></button>
-                            <button class="add-to-cart">Añadir al Carrito</button>
-                        </a>
-                    </li>
+                <ul class="card-list swiper-wrapper" id="carousel-container">
+                    <!-- Productos generados dinámicamente -->
                 </ul>
-                <!-- librerias swiper -->
                 <div class="swiper-pagination"></div>
                 <div class="swiper-slide-button swiper-button-prev"></div>
                 <div class="swiper-slide-button swiper-button-next"></div>
@@ -348,7 +291,7 @@
       <div class="footer-section">
         <h3>SOBRE NOSOTROS</h3>
         <ul>
-          <li><a href="#">Perfumerías Unidas</a></li>
+          <li><a href="#">Perfumerías PYM</a></li>
           <li><a href="#">Tiendas físicas</a></li>
           <li><a href="#">Blog</a></li>
         </ul>

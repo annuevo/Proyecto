@@ -539,7 +539,7 @@ body {
     margin: 20px auto;
     overflow: hidden;
     padding: 0 10px; /* Espaciado en los bordes laterales */
-    border: 1px solid #333;
+    
 }
 
 .carousel__track-container {
@@ -629,9 +629,9 @@ body {
 
 .title2 {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     color: #333;
-    margin: 20px 0;
+    margin: 50px 10px 20px 10px;
 }
 
 /* Estilos para tablet */
