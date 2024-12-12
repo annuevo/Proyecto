@@ -394,11 +394,16 @@ body {
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
 .content .btn button {
-    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
     border: none;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 16px;
-    border: 2px solid #fff;
+    z-index: 2;
+    padding: 10px;
 }
 .content .btn button:nth-child(1) {
     margin-right: 15px;
@@ -885,5 +890,61 @@ body {
 
 
 /* Carrusel de marcas */
+.carousel-m{
+    position: relative;
+    width: 70%; /* Espacio que va a ocupar el contenedor del carrusel */
+    margin: 0 auto;
+    overflow: hidden; /* Ocultar las imágenes fuera del contenedor */
 
+}
+
+.carousel-marcas {
+    display: flex; /* Para alinear elementos dentro del div */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    align-items: center; /* Centrar verticalmente los elementos  */
+    margin: 0 auto;
+    transition: transform 0.5s ease; /* Animación suave al moverse */
+    
+}
+.marcas {
+    padding: 10px;
+    text-align: center;
+    flex: 0 0 20%; /* Cada imagen ocupa el 20% del ancho del contenedor (5 imágenes visibles) */
+
+}
+.marcas img {
+    max-width: 100%; /* Las imágenes no excederán el ancho del contenedor */    
+}
+/* Botones carrusel de Marcas*/
+.carousel-button {
+    position: absolute;
+    top: 50%; /* centra los botones */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4); /*fondo de los botones */
+    color: white;
+    border: none; /* borra el borde de las flechas*/
+    cursor: pointer; /* estilo del cursor*/
+    z-index: 1; /* sobrepone los botones sobre las imagenes */
+    font-size: 25px; /* tamaño de la flecha*/
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.carousel-button.prev {
+    left: 0px;  /*posicionamiento de la flecha */
+}
+
+.carousel-button.next {
+    right: 0px; /*posicionamiento de la flecha */
+}
+
+.tit_marcas {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin: 50px 10px 20px 10px;
+}
 /* fin de la carrusel de marcas */

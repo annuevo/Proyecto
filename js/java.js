@@ -240,5 +240,37 @@ new Swiper('.card-wrapper', {
   /* Carlos castañeda*/
 
   // Carrusel de marcas
-
+  const carouselMarcas=document.querySelector('.carousel-marcas');
+  const marcas = document.querySelectorAll('.marcas');
+  let currentIndex = 0;
+  
+  function showSlideM(index) {
+      const totalMarcas = marcas.length;
+      if (index >= totalMarcas) {
+          currentIndex = 0; // Volver a la primera imagen
+      } else if (index < 0) {
+          currentIndex = totalMarcas - 1; // Volver a la última imagen
+      } else {
+          currentIndex = index;
+      }
+      carouselMarcas.style.transform = `translateX(-${currentIndex*19}%)`;
+  }
+  
+  const botonPrevio = document.querySelector('.carousel-button.prev');
+  const botonSiguiente = document.querySelector('.carousel-button.next');
+  
+  botonPrevio.addEventListener('click',previo);
+  botonSiguiente.addEventListener('click',siguiente);
+  function previo(){    
+      showSlideM(currentIndex-1);
+  }
+  function siguiente(){   
+      showSlideM(currentIndex+1);
+  }
+  
+  
+  // Auto avance
+  setInterval(() => {
+      showSlideM(currentIndex + 1);  // Avanza automáticamente cada 3 segundos
+  }, 2400);
 /*fin de carrusel de marcas */
