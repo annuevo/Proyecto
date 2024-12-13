@@ -387,38 +387,48 @@ body {
     opacity: 0;
     animation: animate 1s ease-in-out 0.9s 1 forwards;
 }
-.content .btn {
+/* boton */
+.content .bt {
     margin-left: 5px;
 
     opacity: 0;
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
-.content .btn button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+.content .bt a {
+    display: inline-block; /* Mejor para enlaces con apariencia de botón */
+    position: relative; /* Cambié de absolute a relative */
+    top: 0; /* Elimina problemas de posicionamiento */
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     font-size: 18px;
     cursor: pointer;
     z-index: 2;
-    padding: 10px;
+    padding: 10px 20px; /* Ajusta para un mejor tamaño visual */
+    text-decoration: none; /* Elimina subrayado */
+    margin-right: 15px; /* Espaciado entre botones */
+    border-radius: 5px; /* Botones redondeados */
+    transition: all 0.3s ease;
 }
-.content .btn button:nth-child(1) {
-    margin-right: 15px;
+
+.content .bt a:nth-child(1) {
+    background-color: #ffffff;
+    color: #333;
 }
-.content .btn button:nth-child(2) {
+
+.content .bt a:nth-child(2) {
     background: transparent;
     color: #14ff72cb;
     border: 2px solid #fff;
-    transition: 0.3s;
 }
-.content .btn button:nth-child(2):hover {
+
+.content .bt a:nth-child(2):hover {
     background-color: #14ff72cb;
     color: #fff;
     border-color: #14ff72cb;
 }
+/* boton */
 @keyframes animate {
 
     from {

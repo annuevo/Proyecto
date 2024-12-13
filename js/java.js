@@ -235,6 +235,14 @@ new Swiper('.card-wrapper', {
   },
 });
 
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('add-to-cart')) {
+        event.preventDefault(); // Evita que el navegador realice cualquier acción predeterminada
+        // Aquí puedes agregar la lógica para manejar la acción de "Añadir al Carrito"
+        console.log("Producto añadido al carrito");
+    }
+});
+
   /*fin del segundo carrusel de productos */
 
   /* Carlos castañeda*/
