@@ -261,7 +261,7 @@ document.addEventListener('click', function (event) {
       } else {
           currentIndex = index;
       }
-      carouselMarcas.style.transform = `translateX(-${currentIndex*19}%)`;
+      carouselMarcas.style.transform = `translateX(-${currentIndex*5}%)`;
   }
   
   const botonPrevio = document.querySelector('.carousel-button.prev');
@@ -280,5 +280,5 @@ document.addEventListener('click', function (event) {
   // Auto avance
   setInterval(() => {
       showSlideM(currentIndex + 1);  // Avanza automáticamente cada 3 segundos
-  }, 2400);
+  }, 1400);
 /*fin de carrusel de marcas */

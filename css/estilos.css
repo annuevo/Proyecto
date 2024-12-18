@@ -903,7 +903,7 @@ body {
 .carousel-m{
     position: relative;
     width: 70%; /* Espacio que va a ocupar el contenedor del carrusel */
-    margin: 0 auto;
+    margin: 5px auto;
     overflow: hidden; /* Ocultar las imágenes fuera del contenedor */
 
 }
@@ -914,16 +914,18 @@ body {
     align-items: center; /* Centrar verticalmente los elementos  */
     margin: 0 auto;
     transition: transform 0.5s ease; /* Animación suave al moverse */
-    
+    width: max-content;
 }
 .marcas {
-    padding: 10px;
-    text-align: center;
-    flex: 0 0 20%; /* Cada imagen ocupa el 20% del ancho del contenedor (5 imágenes visibles) */
-
+    padding: 15px;
+    text-align: center;    
+    
 }
 .marcas img {
-    max-width: 100%; /* Las imágenes no excederán el ancho del contenedor */    
+  
+    width: 200px; 
+    height: auto;
+    
 }
 /* Botones carrusel de Marcas*/
 .carousel-button {
@@ -938,13 +940,14 @@ body {
     font-size: 25px; /* tamaño de la flecha*/
     border-radius: 50%;
     width: 40px;
-    height: 40px;
+    height: 0px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 .carousel-button.prev {
     left: 0px;  /*posicionamiento de la flecha */
+    
 }
 
 .carousel-button.next {
