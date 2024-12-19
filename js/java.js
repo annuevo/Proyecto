@@ -83,6 +83,82 @@ resetTimeAnimation()
 
 
 /*JavaScript del primer carrusel de productos con java scrip puro */
+
+const products = [
+    {
+      id: 1,
+      discount: "-50%",
+      imgSrc: "img/perfume1.webp",
+      alt: "Producto 1",
+      title: "Shiseido",
+      description: "Crema Waso Koshirice Calming Spot Treatment 20 ml",
+      originalPrice: "S/139.00",
+      discountedPrice: "S/69.50",
+    },
+    {
+      id: 2,
+      discount: "-20%",
+      imgSrc: "img/perfume2.webp",
+      alt: "Producto 2",
+      title: "Shiseido",
+      description: "Vital Perfection Uplifting and Firming Eye Cream 15 ml",
+      originalPrice: "S/389.00",
+      discountedPrice: "S/272.30",
+    },
+    {
+      id: 3,
+    discount: "-30%",
+    imgSrc: "img/perfume3.jpg",
+    alt: "Producto 3",
+    title: "Shiseido",
+    description: "Vital Perfection Uplifting and Firming Eye Cream 15 ml",
+    originalPrice: "S/389.00",
+    discountedPrice: "S/272.30",
+  },
+  {
+    id: 4,
+    discount: "-10%",
+    imgSrc: "img/perfume4.webp",
+    alt: "Producto 4",
+    title: "Shiseido",
+    description: "Vital Perfection Uplifting and Firming Eye Cream 15 ml",
+    originalPrice: "S/389.00",
+    discountedPrice: "S/272.30",
+  },
+  {
+    id: 5,
+    discount: "-5%",
+    imgSrc: "img/perfume5.jpg",
+    alt: "Producto 5",
+    title: "Shiseido",
+    description: "Vital Perfection Uplifting and Firming Eye Cream 15 ml",
+    originalPrice: "S/389.00",
+    discountedPrice: "S/272.30",
+  },
+
+    // Agrega más productos aquí...
+  ];
+
+  // Generar dinámicamente las diapositivas
+  const trackk = document.querySelector('.carousel__track');
+  products.forEach((product) => {
+    const slide = document.createElement('li');
+    slide.classList.add('carousel__slide');
+
+    slide.innerHTML = `
+      <div class="product">
+        <span class="discount">${product.discount}</span>
+        <img src="${product.imgSrc}" alt="${product.alt}">
+        <h3>${product.title}</h3>
+        <p>${product.description}</p>
+        <p class="price"><s>${product.originalPrice}</s> ${product.discountedPrice}</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+    `;
+
+    trackk.appendChild(slide);
+  });
+
 // /*codigo mejorado */
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
