@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/carritoCompras.css">
     <!-- link -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
 
@@ -67,6 +68,26 @@
         </nav>
     </header>
 </div>
+
+        <!-- informacion sobre carrito de compras -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-sidebar-header">
+              <h2>Tu carrito</h2>
+          
+              <button id="closeSidebar" class="close-btn">&times;</button>
+            </div>
+            <div class="cart-sidebar-content" id="cartContent">
+              <!-- Aquí se mostrarán los productos -->
+              <p class="empty-cart-message">No tienes elementos en tu carrito de compras</p>
+            </div>
+            <div class="cart-sidebar-footer">
+              <p id="totalItems">0 Items</p>
+              <p id="totalPrice">S/0.00</p>
+              <button class="checkout-btn" id="checkoutBtn">Finalizar Compra</button>
+            </div>
+          </div>
+          
+           <!-- informacion del carro -->
     <!-- carrusel de imagenes -->
     <section class="arriba">
         <div class="carousel">

@@ -226,61 +226,64 @@ prevButton.addEventListener('click', () => moveToSlide('prev'));
 /*Inicio del segundo carrusel de productos con bibliotecas swiper*/
 
 const productos = [
-  {
-      imagen: "img/domi.jpg",
-      categoria: "Adolfo-Dominguez",
-      clase: "versace",
-      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      precioAnterior: "S/389.00",
-      precioActual: "S/272.30"
-  },
-  {
-      imagen: "img/burberry.avif",
-      categoria: "Burberry",
-      clase: "nina",
-      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      precioAnterior: "S/389.00",
-      precioActual: "S/272.30"
-  },
-  {
-      imagen: "img/marck Jacobs.jpg",
-      categoria: "Marc Jacobs",
-      clase: "paco",
-      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      precioAnterior: "S/389.00",
-      precioActual: "S/272.30"
-  },
-  {
-      imagen: "img/DIOR.jpg",
-      categoria: "Dior",
-      clase: "moschino",
-      titulo: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      precioAnterior: "S/389.00",
-      precioActual: "S/272.30"
-  }
-];
-
-// Generar HTML dinámico
-const containe = document.getElementById('carousel-container');
-
-productos.forEach(producto => {
-  const itemHTML = `
-      <li class="card-item swiper-slide">
-          <a href="#" class="card-link">
-              <img src="${producto.imagen}" alt="card-image" class="card-image">
-              <p class="badge ${producto.clase}">${producto.categoria}</p>
-              <h2 class="card-title">${producto.titulo}</h2>
-              <p class="price"><s>${producto.precioAnterior}</s> ${producto.precioActual}</p>
-              <button class="card-button">
-                  <span class="material-symbols-rounded">arrow_forward</span>
-              </button>
-              <button class="add-to-cart">Añadir al Carrito</button>
-          </a>
-      </li>
-  `;
-  containe.innerHTML += itemHTML;
-});
-
+    {
+      id:6,
+        imgSrc: "img/domi.jpg",
+        title: "Adolfo-Dominguez",
+        clase: "versace",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        originalPrice: "S/389.00",
+        discountedPrice: "S/272.30"
+    },
+    {
+      id:7,
+      imgSrc: "img/burberry.avif",
+      title: "Burberry",
+        clase: "nina",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        originalPrice: "S/389.00",
+        discountedPrice: "S/272.30"
+    },
+    {
+      id:8,
+      imgSrc: "img/marck Jacobs.jpg",
+      title: "Marc Jacobs",
+        clase: "paco",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        originalPrice: "S/389.00",
+        discountedPrice: "S/272.30"
+    },
+    {
+      id:9,
+      imgSrc: "img/DIOR.jpg",
+        title: "Dior",
+        clase: "moschino",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        originalPrice: "S/389.00",
+        discountedPrice: "S/272.30"
+    }
+  ];
+  
+  // Generar HTML dinámico
+  const containe = document.getElementById('carousel-container');
+  
+  productos.forEach(producto => {
+    const itemHTML = `
+        <li class="card-item swiper-slide">
+            <a href="#" class="card-link">
+                <img src="${producto.imgSrc}" alt="card-image" class="card-image">
+                <p class="badge ${producto.clase}">${producto.title}</p>
+                <h2 class="card-title">${producto.description}</h2>
+                <p class="price"><s>${producto.originalPrice}</s> ${producto.discountedPrice}</p>
+                <button class="card-button">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                </button>
+                <button class="add-to-cart">Añadir al Carrito</button>
+            </a>
+        </li>
+    `;
+    containe.innerHTML += itemHTML;
+  });
 // Inicializar Swiper
 new Swiper('.card-wrapper', {
   loop: true,
